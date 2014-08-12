@@ -4,4 +4,8 @@ FIDO is an automated incident response tool used to evaluate, assess and respond
 
 ## Full Documentation
 
-See the [Wiki](https://github.com/Netflix/Fido/wiki/) for full documentation, examples, operational details and other information.
+See the [FIDO Wiki](https://github.com/Netflix/Fido/wiki/) for full documentation, operational details and other information.
+
+## Bugs and Feedback
+
+For bugs, questions and discussion please use [Github issues](https://github.com/Netflix/Fido/wiki)
