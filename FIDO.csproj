@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{077EF9DC-9F90-4E51-AB10-51E9DF2CE6CC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fido_Main</RootNamespace>
+    <AssemblyName>FIDO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fido_Support\Support\fido.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Fido_Main.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Targets.Syslog">
+      <HintPath>..\packages\NLog.Targets.Syslog.2.1.5491.28378\lib\net35\NLog.Targets.Syslog.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="S22.Imap">
+      <HintPath>..\packages\S22.Imap.3.6.0.0\lib\net40\S22.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="VirusTotal.NET, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\VirusTotal.NET.1.2.1\lib\VirusTotal.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Director\Director_Helper\The_Director_Whitelist.cs" />
+    <Compile Include="Director\Scoring\Matrix_Scoring.cs" />
+    <Compile Include="Director\Director_Helper\The_Director_ThreatFeeds_Hash.cs" />
+    <Compile Include="Director\Director_Helper\The_Director_ThreatFeeds_URL.cs" />
+    <Compile Include="Director\SysMgmt\SysMgmt_CarbonBlack.cs" />
+    <Compile Include="Fido_Support\Objects\Carbon_Black\Object_CarbonBlack_Alert_Class.cs" />
+    <Compile Include="Fido_Support\Objects\Carbon_Black\Object_CarbonBlack_Inventory_Class.cs" />
+    <Compile Include="Fido_Support\Objects\Cyphort\Object_Cyphort_Class.cs" />
+    <Compile Include="Fido_Support\Objects\OpenDNS\Object_OpenDNS_Configs.cs" />
+    <Compile Include="Fido_Support\Objects\OpenDNS\Object_OpenDNS_DomainStatus.cs" />
+    <Compile Include="Fido_Support\Objects\PaloAlto\Object_PaloAlto_Class.cs" />
+    <Compile Include="Fido_Support\Objects\Protectwise\Object_Protectwise_Configs.cs" />
+    <Compile Include="Fido_Support\Objects\Protectwise\Object_Protectwise_Search_ConfigClass.cs" />
+    <Compile Include="Fido_Support\Objects\Protectwise\Object_Protectwise_Threat_ConfigClass.cs" />
+    <Compile Include="Fido_Support\Objects\ThreatGRID\Object_ThreatGRID_Threat_ConfigClass.cs" />
+    <Compile Include="Fido_Support\Objects\ThreatGRID\Object_ThreatGRID_Configs.cs" />
+    <Compile Include="Fido_Support\Objects\ThreatGRID\Object_ThreatGRID_IP_ConfigClass.cs" />
+    <Compile Include="Fido_Support\Objects\ThreatGRID\Object_ThreatGRID_Search_ConfigClass.cs" />
+    <Compile Include="Main\Detectors\Detect_CarbonBlack.cs" />
+    <Compile Include="Main\Detectors\Detect_Cyphort_v3.cs" />
+    <Compile Include="Main\Detectors\Detect_Protectwise_v1.cs" />
+    <Compile Include="Main\Detectors\Detect_SentinelOne.cs" />
+    <Compile Include="Notification\Notification_Helper\Notfication_Helper.cs" />
+    <Compile Include="Notification\Notification_Helper\Notfication_ProtectWise_Helper.cs" />
+    <Compile Include="Notification\Notification_Helper\Notification_CarbonBlack_Helper.cs" />
+    <Compile Include="Notification\Notification_Helper\Notification_Cyphort_Helper.cs" />
+    <Compile Include="Notification\Notification_Helper\Notification_PaloAlto_Helper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Director\DestinationInfo\Geo_Ip.cs" />
+    <Compile Include="Director\Scoring\Matrix_Historical_Helper.cs" />
+    <Compile Include="Director\SysMgmt\SysMgmt_Sccm.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_Lastline.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_OpenDNS.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_WildFire.cs" />
+    <Compile Include="Fido_Support\Objects\Fido\Object_Fido_ConfigClass.cs" />
+    <Compile Include="Fido_Support\Objects\Fido\Object_Fido_Configs.cs" />
+    <Compile Include="Fido_Support\FidoDB\SQLite.cs" />
+    <Compile Include="Fido_Support\FidoDB\Fido_UpdateDB.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_ThreatGRID.cs" />
+    <Compile Include="Enforcer\The_Enforcer.cs" />
+    <Compile Include="Enforcer\ShellExecute\Python.cs" />
+    <Compile Include="Fido_Support\Objects\VirusTotal\Object_VirusTotal_IP.cs" />
+    <Compile Include="Main\Detectors\Detect_Bro.cs" />
+    <Compile Include="Main\Detectors\Detect_Cyphort_v2.cs" />
+    <Compile Include="Main\Detectors\Detect_FireeyeMAS.cs" />
+    <Compile Include="Main\Detectors\Detect_FireeyeMPS.cs" />
+    <Compile Include="Main\Detectors\Detect_Lastline.cs" />
+    <Compile Include="Main\Detectors\Detect_PaloAlto.cs" />
+    <Compile Include="Main\Detectors\Detect_Snort.cs" />
+    <Compile Include="Main\Detectors\Detect_Sourcefire.cs" />
+    <Compile Include="Fido_Support\ErrorHandling\Fido_Eventhandler.cs" />
+    <Compile Include="Fido_Support\Objects\Fido\Object_Fido_LocalClass.cs" />
+    <Compile Include="Fido_Support\Network\Fido_NetSegments.cs" />
+    <Compile Include="Main\Receivers\Receive_API.cs" />
+    <Compile Include="Main\Receivers\Receive_Logging.cs" />
+    <Compile Include="Director\Scoring\Matrix.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_Cymru.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_VirusTotal.cs" />
+    <Compile Include="Main\Detectors\Detect_Bit9.cs" />
+    <Compile Include="Main\Receivers\Receive_SQL.cs" />
+    <Compile Include="Director\Sumologic\SumoLogic.cs" />
+    <Compile Include="Director\SysMgmt\SysMgmt_ActiveDirectory.cs" />
+    <Compile Include="Director\The_Director.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_Quttera.cs" />
+    <Compile Include="Fido_Support\Crypto\AES_Crypto.cs" />
+    <Compile Include="Notification\Email\Email_Send.cs" />
+    <Compile Include="Fido_Support\FidoDB\SQL_Queries.cs" />
+    <Compile Include="Director\Threat_Feeds\Feeds_AlientVault.cs" />
+    <Compile Include="Director\SysMgmt\SysMgmt_Jamf.cs" />
+    <Compile Include="Director\SysMgmt\SysMgmt_Landesk.cs" />
+    <Compile Include="Fido_Support\Logging\Logging_Fido.cs" />
+    <Compile Include="Enforcer\DHCP\MS_Dhcp.cs" />
+    <Compile Include="Main\Receivers\Receive_Email.cs" />
+    <Compile Include="Enforcer\ShellExecute\Powershell.cs" />
+    <Compile Include="Main\Detectors\Detect_Sophos.cs" />
+    <Compile Include="Fido_Support\Logging\Logging_Sumo.cs" />
+    <Compile Include="Director\VPN\VPN_Avaya.cs" />
+    <Compile Include="Fido_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fido_Main.Designer.cs">
+      <DependentUpon>Fido_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Director\Director_Helper\The_Director_HostDetection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Notification\Notification.cs" />
+    <Compile Include="Notification\Tickets\Service-Now.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fido_Main.resx">
+      <DependentUpon>Fido_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\data\fido.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\media\email_templates\email_template_summary.htm" />
+    <Content Include="bin\Debug\media\email_templates\email_template_summary_av.htm" />
+    <Content Include="bin\Debug\media\email_templates\email_template_summary_bit9.htm" />
+    <Content Include="bin\Debug\media\gauge\100percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\10percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\15percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\20percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\25percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\30percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\35percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\40percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\45percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\50percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\55percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\5percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\60percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\65percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\70percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\75percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\80percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\85percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\90percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\95percent.JPG" />
+    <Content Include="bin\Debug\media\gauge\red0.png" />
+    <Content Include="bin\Debug\media\gauge\red10.png" />
+    <Content Include="bin\Debug\media\gauge\red100.png" />
+    <Content Include="bin\Debug\media\gauge\red15.png" />
+    <Content Include="bin\Debug\media\gauge\red20.png" />
+    <Content Include="bin\Debug\media\gauge\red25.png" />
+    <Content Include="bin\Debug\media\gauge\red30.png" />
+    <Content Include="bin\Debug\media\gauge\red35.png" />
+    <Content Include="bin\Debug\media\gauge\red40.png" />
+    <Content Include="bin\Debug\media\gauge\red45.png" />
+    <Content Include="bin\Debug\media\gauge\red5.png" />
+    <Content Include="bin\Debug\media\gauge\red50.png" />
+    <Content Include="bin\Debug\media\gauge\red55.png" />
+    <Content Include="bin\Debug\media\gauge\red60.png" />
+    <Content Include="bin\Debug\media\gauge\red65.png" />
+    <Content Include="bin\Debug\media\gauge\red70.png" />
+    <Content Include="bin\Debug\media\gauge\red75.png" />
+    <Content Include="bin\Debug\media\gauge\red80.png" />
+    <Content Include="bin\Debug\media\gauge\red85.png" />
+    <Content Include="bin\Debug\media\gauge\red90.png" />
+    <Content Include="bin\Debug\media\gauge\red95.png" />
+    <Content Include="bin\Debug\media\gauge\total0.png" />
+    <Content Include="bin\Debug\media\gauge\total10.png" />
+    <Content Include="bin\Debug\media\gauge\total100.png" />
+    <Content Include="bin\Debug\media\gauge\total15.png" />
+    <Content Include="bin\Debug\media\gauge\total20.png" />
+    <Content Include="bin\Debug\media\gauge\total25.png" />
+    <Content Include="bin\Debug\media\gauge\total30.png" />
+    <Content Include="bin\Debug\media\gauge\total35.png" />
+    <Content Include="bin\Debug\media\gauge\total40.png" />
+    <Content Include="bin\Debug\media\gauge\total45.png" />
+    <Content Include="bin\Debug\media\gauge\total5.png" />
+    <Content Include="bin\Debug\media\gauge\total50.png" />
+    <Content Include="bin\Debug\media\gauge\total55.png" />
+    <Content Include="bin\Debug\media\gauge\total60.png" />
+    <Content Include="bin\Debug\media\gauge\total65.png" />
+    <Content Include="bin\Debug\media\gauge\total70.png" />
+    <Content Include="bin\Debug\media\gauge\total75.png" />
+    <Content Include="bin\Debug\media\gauge\total80.png" />
+    <Content Include="bin\Debug\media\gauge\total85.png" />
+    <Content Include="bin\Debug\media\gauge\total90.png" />
+    <Content Include="bin\Debug\media\gauge\total95.png" />
+    <Content Include="contributors.txt" />
+    <Content Include="Fido_Support\Support\fido.ico" />
+    <Content Include="Notification\Email_Template\email_template_sample.htm" />
+    <Content Include="Notification\Email_Template\email_template_summary_bit9.htm" />
+    <Content Include="Notification\Email_Template\email_template_summary.htm" />
+    <Content Include="Notification\Email_Template\email_template_detailed.htm" />
+    <Content Include="Notification\Email_Template\email_template_summary_av.htm" />
+    <Content Include="Notification\Images\Default_Score\red0.png" />
+    <Content Include="Notification\Images\Default_Score\red10.png" />
+    <Content Include="Notification\Images\Default_Score\red100.png" />
+    <Content Include="Notification\Images\Default_Score\red15.png" />
+    <Content Include="Notification\Images\Default_Score\red20.png" />
+    <Content Include="Notification\Images\Default_Score\red25.png" />
+    <Content Include="Notification\Images\Default_Score\red30.png" />
+    <Content Include="Notification\Images\Default_Score\red35.png" />
+    <Content Include="Notification\Images\Default_Score\red40.png" />
+    <Content Include="Notification\Images\Default_Score\red45.png" />
+    <Content Include="Notification\Images\Default_Score\red5.png" />
+    <Content Include="Notification\Images\Default_Score\red50.png" />
+    <Content Include="Notification\Images\Default_Score\red55.png" />
+    <Content Include="Notification\Images\Default_Score\red60.png" />
+    <Content Include="Notification\Images\Default_Score\red65.png" />
+    <Content Include="Notification\Images\Default_Score\red70.png" />
+    <Content Include="Notification\Images\Default_Score\red75.png" />
+    <Content Include="Notification\Images\Default_Score\red80.png" />
+    <Content Include="Notification\Images\Default_Score\red85.png" />
+    <Content Include="Notification\Images\Default_Score\red90.png" />
+    <Content Include="Notification\Images\Default_Score\red95.png" />
+    <Content Include="Notification\Images\Total_Score\Gauge\100percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\10percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\15percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\20percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\25percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\30percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\35percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\40percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\45percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\50percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\55percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\5percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\60percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\65percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\70percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\75percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\80percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\85percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\90percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Gauge\95percent.JPG" />
+    <Content Include="Notification\Images\Total_Score\Linear\total0.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total10.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total100.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total15.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total20.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total25.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total30.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total35.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total40.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total45.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total5.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total50.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total55.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total60.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total65.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total70.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total75.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total80.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total85.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total90.png" />
+    <Content Include="Notification\Images\Total_Score\Linear\total95.png" />
+    <Content Include="authors.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enforcer\SysMgmt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.Management.Infrastructure">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Management.Infrastructure.Native">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Management.Automation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

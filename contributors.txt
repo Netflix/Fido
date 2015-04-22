@@ -1,0 +1,17 @@
+Bit9 + Carbon Black
+https://github.com/carbonblack/cbapi/blob/master/LICENSE.md
+
+S22.IMAP
+https://github.com/smiley22/S22.Imap/blob/master/License.md
+
+Nlog
+https://raw.githubusercontent.com/NLog/NLog/master/LICENSE.txt
+
+RestSharp
+https://github.com/restsharp/RestSharp/blob/master/LICENSE.txt
+
+VirusTotal.Net
+https://github.com/Genbox/VirusTotal.NET
+
+NewtonSoft.Json
+https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
