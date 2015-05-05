@@ -1,8 +1,0 @@
-SELECT     antibody_instances_id, antibody_group_id, First_Created, date_deleted, File_Name, Path_Name, Instance_Group_Name, Leaf_File, Hash, MD5, SHA1, host_id, 
-                      antibody_id, filename_id, pathname_id, product_name, product_version, company, Publisher_State, Node_Type, File_Type, Local_State_Raw, Local_State, UI_State, 
-                      Global_State, Reputation_Approval, State_Source, Effective_State, Effective_State_Details, Effective_State_Details_Simple, Computer_Name, OS_Name, 
-                      Computer_Comment, Computer_Deleted, IP_Address, Platform, platform_id, Connected, Upgrade_Status, Policy_Status, Computer_Uninstalled, Days_Offline, 
-                      connected_string, Host_Agent_Version, Host_Group, host_group_id, User_Name, Publisher, Publisher_or_Company, publisher_id, ParityCenterTrust, 
-                      ParityCenterThreat, Automatic, file_size, Category, Initialized, TopLevel, Installed_Program_Name, Executed, Detached_Publisher, detached_publisher_id, 
-                      Detached_Publisher_State, Detached_Publisher_State_Source, Deleted, Group_type, usage_counter, Detailed_Local_State, flags, TrustMessages
-FROM         dbo.AllAntibodyInstancesGUI
