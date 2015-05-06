@@ -237,7 +237,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="bin\Debug\data\fido.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -262,71 +261,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\media\email_templates\email_template_summary.htm" />
-    <Content Include="bin\Debug\media\email_templates\email_template_summary_av.htm" />
-    <Content Include="bin\Debug\media\email_templates\email_template_summary_bit9.htm" />
-    <Content Include="bin\Debug\media\gauge\100percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\10percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\15percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\20percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\25percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\30percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\35percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\40percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\45percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\50percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\55percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\5percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\60percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\65percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\70percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\75percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\80percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\85percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\90percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\95percent.JPG" />
-    <Content Include="bin\Debug\media\gauge\red0.png" />
-    <Content Include="bin\Debug\media\gauge\red10.png" />
-    <Content Include="bin\Debug\media\gauge\red100.png" />
-    <Content Include="bin\Debug\media\gauge\red15.png" />
-    <Content Include="bin\Debug\media\gauge\red20.png" />
-    <Content Include="bin\Debug\media\gauge\red25.png" />
-    <Content Include="bin\Debug\media\gauge\red30.png" />
-    <Content Include="bin\Debug\media\gauge\red35.png" />
-    <Content Include="bin\Debug\media\gauge\red40.png" />
-    <Content Include="bin\Debug\media\gauge\red45.png" />
-    <Content Include="bin\Debug\media\gauge\red5.png" />
-    <Content Include="bin\Debug\media\gauge\red50.png" />
-    <Content Include="bin\Debug\media\gauge\red55.png" />
-    <Content Include="bin\Debug\media\gauge\red60.png" />
-    <Content Include="bin\Debug\media\gauge\red65.png" />
-    <Content Include="bin\Debug\media\gauge\red70.png" />
-    <Content Include="bin\Debug\media\gauge\red75.png" />
-    <Content Include="bin\Debug\media\gauge\red80.png" />
-    <Content Include="bin\Debug\media\gauge\red85.png" />
-    <Content Include="bin\Debug\media\gauge\red90.png" />
-    <Content Include="bin\Debug\media\gauge\red95.png" />
-    <Content Include="bin\Debug\media\gauge\total0.png" />
-    <Content Include="bin\Debug\media\gauge\total10.png" />
-    <Content Include="bin\Debug\media\gauge\total100.png" />
-    <Content Include="bin\Debug\media\gauge\total15.png" />
-    <Content Include="bin\Debug\media\gauge\total20.png" />
-    <Content Include="bin\Debug\media\gauge\total25.png" />
-    <Content Include="bin\Debug\media\gauge\total30.png" />
-    <Content Include="bin\Debug\media\gauge\total35.png" />
-    <Content Include="bin\Debug\media\gauge\total40.png" />
-    <Content Include="bin\Debug\media\gauge\total45.png" />
-    <Content Include="bin\Debug\media\gauge\total5.png" />
-    <Content Include="bin\Debug\media\gauge\total50.png" />
-    <Content Include="bin\Debug\media\gauge\total55.png" />
-    <Content Include="bin\Debug\media\gauge\total60.png" />
-    <Content Include="bin\Debug\media\gauge\total65.png" />
-    <Content Include="bin\Debug\media\gauge\total70.png" />
-    <Content Include="bin\Debug\media\gauge\total75.png" />
-    <Content Include="bin\Debug\media\gauge\total80.png" />
-    <Content Include="bin\Debug\media\gauge\total85.png" />
-    <Content Include="bin\Debug\media\gauge\total90.png" />
-    <Content Include="bin\Debug\media\gauge\total95.png" />
     <Content Include="contributors.txt" />
     <Content Include="Fido_Support\Support\fido.ico" />
     <Content Include="Notification\Email_Template\email_template_sample.htm" />
@@ -397,12 +331,6 @@
     <Content Include="Notification\Images\Total_Score\Linear\total90.png" />
     <Content Include="Notification\Images\Total_Score\Linear\total95.png" />
     <Content Include="authors.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enforcer\SysMgmt\" />
