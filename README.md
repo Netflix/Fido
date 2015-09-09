@@ -9,3 +9,5 @@ See the [FIDO Wiki](https://github.com/Netflix/Fido/wiki/) for full documentatio
 ## Bugs and Feedback
 
 For bugs, questions and discussion please use [Github issues](https://github.com/Netflix/Fido/issues)
+
+(Netflix's FIDO - Fully Integrated Defense Operation - is not a part of or service of the FIDO Alliance)
